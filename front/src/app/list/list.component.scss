@@ -1,0 +1,63 @@
+.container {
+  text-align: center;
+  width: 75%;
+  margin: 20px auto;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  width: 18%;
+  margin: 20px 10px 20px 10px;
+
+  .card-body {
+    padding: 20px;
+    height: 210px;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  p {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.2em;
+    max-height: 6em;
+    text-align: justify;
+    margin-right: -1em;
+    padding-right: 1.5em;
+  }
+  p:before {
+    content: "...";
+    position: absolute;
+    right: 12px;
+    bottom: 1px;
+  }
+
+  img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+  }
+}
+
+.btn {
+  background-color: white;
+  height: 30px;
+  width: 120px;
+  border: 1px solid black;
+  border-radius: 1px;
+  margin: 10px 20px;
+}
+
+select {
+  height: 30px;
+  background-color: white;
+}

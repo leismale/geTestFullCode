@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Growth Engineering</h1>
+
+  <div class="navigation">
+    <button (click)="getPlayList('prev', result)" class="btn">Previous page</button>
+    <button (click)="getPlayList('next', result)" class="btn">Next page</button>
+    <span>Results per page: </span>
+    <select [(ngModel)]="result" (change)="getPlayList('start', result)">
+      <option [value]="result" *ngFor="let result of results">{{result}}</option>
+    </select>
+  </div>
+
+  <div *ngIf="videos" class="card-wrapper">
+    <div *ngFor="let item of videos" class="card">
+      <div class="heading">
+        <a href="https://www.youtube.com/watch?v={{item.videoId}}">
+          <img [src]="item.thumbnailUrl" [alt]="item.title">
+        </a>
+      </div>
+      <div class="card-body">
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
